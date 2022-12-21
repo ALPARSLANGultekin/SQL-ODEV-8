@@ -1,6 +1,6 @@
 # SQL-ODEV-8
 
-##test veritabanınızda employee isimli sütun bilgileri id(INTEGER), name VARCHAR(50), birthday DATE, email VARCHAR(100) olan bir tablo oluşturalım.
+## test veritabanınızda employee isimli sütun bilgileri id(INTEGER), name VARCHAR(50), birthday DATE, email VARCHAR(100) olan bir tablo oluşturalım.
 Create table employee (
 	id serial primary key,
 	name varchar(50) not null,
@@ -8,7 +8,7 @@ Create table employee (
 	email varchar(100) not null
 );
 
-##Oluşturduğumuz employee tablosuna 'Mockaroo' servisini kullanarak 50 adet veri ekleyelim.
+## Oluşturduğumuz employee tablosuna 'Mockaroo' servisini kullanarak 50 adet veri ekleyelim.
 
 
 insert into employee (first_name, birtday, email) values ('Jacquelynn', '1927-06-14', 'jlamblot0@delicious.com');
@@ -62,7 +62,7 @@ insert into employee (first_name, birtday, email) values ('Tedi', '1986-09-22', 
 insert into employee (first_name, birtday, email) values ('Alexa', '2006-08-25', 'awaleran1c@spotify.com');
 insert into employee (first_name, birtday, email) values ('Rozele', '1978-06-11', 'rfriar1d@princeton.edu');
 
-##Sütunların her birine göre diğer sütunları güncelleyecek 5 adet UPDATE işlemi yapalım.
+## Sütunların her birine göre diğer sütunları güncelleyecek 5 adet UPDATE işlemi yapalım.
 UPDATE employee
 SET name = 'OCS OCS'
 WHERE name LIKE 'B%'
@@ -89,7 +89,7 @@ SET birthday = NULL
 WHERE name LIKE 'A%c'
 RETURNING *;
 
-##Sütunların her birine göre ilgili satırı silecek 5 adet DELETE işlemi yapalım.
+## Sütunların her birine göre ilgili satırı silecek 5 adet DELETE işlemi yapalım.
 DELETE FROM employee
 WHERE email LIKE 'sr%'
 RETURNING *;
